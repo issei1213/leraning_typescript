@@ -323,3 +323,59 @@
 //     }
 // }
 
+// 3.2.13  列挙型
+// enum Language {
+//     English = 100,
+//     Spanish = 200 + 300,
+//     Russian // 500と型推論される
+// }
+//
+//
+// let myFirstLanguage = Language.Russian  // Language
+// let mySecondLanguage = Language['English'] // Language
+//
+//
+// enum Color {
+//     Red = '#c10000',
+//     Blue = '#007ac1',
+//     Pink = 0xc10050,    // 16進リテラル
+//     White = 255 // 10進リテラル
+// }
+//
+// let red = Color.Red // Color
+// let pink = Color.Pink   // Color
+//
+// let a = Color.Red
+// let b = Color.Green // TS2339: Property 'Green' does not exist on type 'typeof Color'.
+//
+// let c = Color[255]  // string
+// let d = Color[6]    // string
+//
+//
+
+// 3.2.13  列挙型
+const enum Language {
+    English,
+    Spanish,
+    Russian
+}
+
+// 有効なenumキーにアクセスする
+let a = Language.English
+
+// 無効なenumキーにアクセスする
+let b = Language.Tagalog    // TS2339: Property 'Tagalog' does not exist on type 'typeof Language'.
+
+// 有効なenum値にアクセスする
+let c = Language[0] // TS2476: A const enum member can only be accessed using a string literal
+
+// 無効なenum値にアクセスする
+let d = Language[6] // TS2476: A const enum member can only be accessed using a string literal.
+
+
+
+
+
+
+
+
