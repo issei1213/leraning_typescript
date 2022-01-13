@@ -392,8 +392,8 @@
 // c: never型は型推論の条件式が必要になるため
 // d: 不完全の値になるため
 
-let i: unknown = 4
-let m = i * 2 // TS2571: Object is of type 'unknown'.
-
+// let i: unknown = 4
+// let m = i * 2 // TS2571: Object is of type 'unknown'.
+//
 
 
