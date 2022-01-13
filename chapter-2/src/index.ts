@@ -354,28 +354,46 @@
 //
 
 // 3.2.13  列挙型
-const enum Language {
-    English,
-    Spanish,
-    Russian
-}
+// const enum Language {
+//     English,
+//     Spanish,
+//     Russian
+// }
+//
+// // 有効なenumキーにアクセスする
+// let a = Language.English
+//
+// // 無効なenumキーにアクセスする
+// let b = Language.Tagalog    // TS2339: Property 'Tagalog' does not exist on type 'typeof Language'.
+//
+// // 有効なenum値にアクセスする
+// let c = Language[0] // TS2476: A const enum member can only be accessed using a string literal
+//
+// // 無効なenum値にアクセスする
+// let d = Language[6] // TS2476: A const enum member can only be accessed using a string literal.
+//
+//
+//
 
-// 有効なenumキーにアクセスする
-let a = Language.English
+// 3.4 練習問題
+// 1
+// a: number
+// b: string
+// c: pineapples
+// d: boolean[]
+// e: { type: string }
+// f: (4number | boolean)[]
+// g: number[]
+// h: any
 
-// 無効なenumキーにアクセスする
-let b = Language.Tagalog    // TS2339: Property 'Tagalog' does not exist on type 'typeof Language'.
+// 2
+// a: 3しか代入できないため
+// b: number[]になっているため
+// c: never型は型推論の条件式が必要になるため
+// d: 不完全の値になるため
 
-// 有効なenum値にアクセスする
-let c = Language[0] // TS2476: A const enum member can only be accessed using a string literal
-
-// 無効なenum値にアクセスする
-let d = Language[6] // TS2476: A const enum member can only be accessed using a string literal.
-
-
-
-
-
+let i: unknown = 4
+let m = i * 2 // TS2571: Object is of type 'unknown'.
 
 
 
